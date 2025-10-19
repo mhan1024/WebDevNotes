@@ -4,11 +4,11 @@ Table of Contents
 - [Project Setup (Vite)](#project-setup-vite)
 - [Project Setup (Vue CLI)](#project-setup-vue-cli)
 - [Project Structure](#project-structure)
-- [](##)
+- [Router](#%EF%B8%8F-router)
 - [](##)
 
-<a id="project-setup-vite"></a>
 ## 🧩 Project Setup (Vite)
+<a id="project-setup-vite"></a>
 - Create a new project\
  `npm create vite@latest <project-name>`
 - Select Vue when prompted to choose a framework.
@@ -20,8 +20,8 @@ Table of Contents
    `npm run dev`
 - Go to <a href="http://localhost:5173">http://localhost:5173</a>
 
-<a id="project-setup-vue-cli"></a>
 ## 🧩 Project Setup (Vue CLI)
+<a id="project-setup-vue-cli"></a>
 - Install Vue CLI (if needed)\
   `npm install -g @vue/cli`
 - Create a new project\
