@@ -1,7 +1,7 @@
 # ✅ Vue
 Website: <a href="https://vuejs.org">https://vuejs.org</a>\
 Table of Contents
-- [Project Setup (Vite)](#project-setup-vite)
+- [Project Setup (Vite)](#-project-setup-vite)
 - [Project Setup (Vue CLI)](#project-setup-vue-cli)
 - [Project Structure](#project-structure)
 - [Router](#%EF%B8%8F-router)
