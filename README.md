@@ -1,5 +1,7 @@
 # 💻 Web Development Guide (M's version)
 
+My ever-growing collection of notes that I'll never catch up on...
+
 ## 📝 Contents
 - [Frontend](##Frontend)
 - [Backend](##Backend)
