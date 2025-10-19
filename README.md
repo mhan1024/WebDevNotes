@@ -29,10 +29,9 @@ Popular frameworks include: [Angular](###Angular), [React](###React), [Vue](###V
   <ul>
     <li>A mix between Angular and React that uses HTML-based templates and reactive data binding.</li>
     <li>Vue is also called a "progressive framework" because you can start small with a single component and scale up as needed.</li>
+    <li><a href="./Vue.md">Vue Cheatsheet</a></li>
   </ul>
   
-[Vue Cheatsheet](./Vue.md)
-
 ### 🚀 Next.js
   <ul>
     <li>A React-based framework that includes the tools/components needed to build a web application.</li>
