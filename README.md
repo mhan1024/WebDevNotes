@@ -3,9 +3,9 @@
 My ever-growing collection of notes that I'll never catch up on...
 
 ## 📝 Contents
-- [Frontend](##Frontend)
-- [Backend](##Backend)
-- [Databases](##Databases)
+- [Frontend](#%EF%B8%8F-frontend)
+- [Backend](#%EF%B8%8F-backend)
+- [Databases](#-databases)
 
 ## ⚛️ Frontend
 Frameworks help split web applications into components, manage data and state, and update the UI automatically when data changes. \
