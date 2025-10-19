@@ -22,6 +22,7 @@ Popular frameworks include: [Angular](###Angular), [React](###React), [Vue](###V
   <ul>
     <li>A UI library rather than a framework that allows you to write HTML inside JavaScript (JSX).</li>
     <li>React only handles the UI layer and you'll need to install third-party libraries for routing, forms, HTTP requests, and state management.</li>
+    <li><a href="./React.md">React Cheatsheet</a></li>
   </ul>
 
 
