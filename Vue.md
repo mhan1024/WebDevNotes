@@ -3,7 +3,7 @@ Website: <a href="https://vuejs.org">https://vuejs.org</a>\
 Table of Contents
 - [Project Setup (Vite)](#project-setup-vite)
 - [Project Setup (Vue CLI)](#project-setup-vue-cli)
-- [](##)
+- [Project Structure](#project-structure)
 - [](##)
 - [](##)
 
@@ -33,7 +33,7 @@ Table of Contents
 - Go to <a href="http://localhost:8080">http://localhost:8080</a>
 
 ## 🏗️ Project Structure
-<a id=""></a>
+<a id="project-structure"></a>
   ```
   <project-name>/ 
   ├─ public/           # Static assets (index.html) 
