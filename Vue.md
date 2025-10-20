@@ -53,7 +53,7 @@ Table of Contents:
 ## 📘 Basics
 - Text interpolation: `{{ Vue instance }}`
 - Vue instance: connects data, HTML, and logic
-  ```
+  ```javascript
   const app = Vue.createApp({
     data() {
       return {
@@ -68,7 +68,7 @@ Table of Contents:
 ## ⚙️ Methods
 Used to store functions that belong to the Vue instance
 - Syntax:
-  ```
+  ```javascript
    methods: {
      function() {
        // do something
@@ -79,7 +79,7 @@ Used to store functions that belong to the Vue instance
 ## 🧠 Computed Properties
 A variable that automatically calculate a value based on other data and update whenever the data changes
 - Syntax:
-  ```
+  ```javascript
    computed: {
      function() {
        // do something
@@ -90,7 +90,7 @@ A variable that automatically calculate a value based on other data and update w
 ## 👀 Watchers
 A method that "watches" a data property and reacts when it changes by running some code automatically
 - Syntax:
-  ```
+  ```javascript
    watch: {
      function() {
        // do something
@@ -105,51 +105,77 @@ These are special HTML attributes that give the HTML tag extra functionality.
   
 v-bind: lets us bind an HTML attribute to data and allows changing the attribute value dynamically
 - Syntax:
-  `<div v-bind:[attribute]="[Vue data]"></div>`
-- Can be used to change the class attribute
+  ```html
+  <div v-bind:[attribute]="[Vue data]"></div>
   ```
+- Can be used to change the class attribute
+  ```html
    <div v-bind:class="className">
      The class is set with Vue
    </div>
   ```
-- Shorthand: `<div :[attribute]="[Vue data]"></div>"`
+- Shorthand:
+  ```html
+  <div :[attribute]="[Vue data]"></div>
+  ```
 
 v-if: lets us create an HTML element only if a condition is true (conditional rendering)
 - Includes: `v-if, v-else-if, v-else`
-- Syntax: `<div v-if="condition"></div>`
+- Syntax:
+  ```html
+  <div v-if="condition"></div>
+  ```
 
 v-show: lets us hide an element when the condition is false
-- Syntax: `<div v-show="condition">This div tag can be hidden when condition == false</div>`
+- Syntax:
+  ```html
+  <div v-show="condition">This div tag can be hidden when condition == false</div>
+  ```
 
 v-for: lets us create HTML elements based on an array
 - Elements created with this directive will automatically update when the array changes
 - Syntax:
-  ```
+  ```html
    <ol>
      <li v-for="x in arr">{{ x }}</li>
    </ol>
   ```
 - Get index:
-  ```
+  ```html
    <p v-for="(x, index) in arr">
      {{ index }}: "{{ x }}"
    </p>
   ```
   
 v-on: lets us perform actions based on specified events
-- onclick Event: `<tag v-on:click="action"></tag>`
-- oninput Event: `<tag v-on:input="action"></tag>`
-- mousemove Event: `<tag v-on:mousemove="action"></tag>`
-- Shorthand: `<tag @:[attribute]="action"></tag>"`
+- onclick Event:
+  ```html
+  <tag v-on:click="action"></tag>
+  ```
+- oninput Event:
+  ```html
+  <tag v-on:input="action"></tag>
+  ```
+- mousemove Event:
+  ```html
+  <tag v-on:mousemove="action"></tag>
+  ```
+- Shorthand:
+  ```html
+  <tag @:[attribute]="action"></tag>
+  ```
 
 v-model: lets us create a link between the input element's value attribute and a data value in the Vue instance
-- Syntax: `<input type="type" v-model="Vue instance">`
+- Syntax:
+  ```html
+  <input type="type" v-model="Vue instance">
+  ```
   
 ## 🗺️ Router
 - Install Vue Router package\
   `npm install vue-router`\
 - In `main.js`:
-  ```
+  ```javascript
   import { createRouter, createWebHistory } from 'vue-router'
   import <name>Page from './pages/<name>Page.vue'
   ...
@@ -168,7 +194,7 @@ v-model: lets us create a link between the input element's value attribute and a
  
   ```
 - In `App.vue`:
-  ```
+  ```html
   <script setup>
     import <name>Page from './pages/<name>Page.vue'
     ...
@@ -186,7 +212,7 @@ v-model: lets us create a link between the input element's value attribute and a
 ## 📝 Forms
 - v-model: a special attribute that creates 2-way binding between a form input and a data property
 - 2-way binding: when the user types something in the input, the data will update automatically, and when the data changes, the input will update automatically
-```
+```html
 <template>
   <form @submit.prevent="submitForm">
     <input v-model="form.name" placeholder="Name" />
