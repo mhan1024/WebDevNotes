@@ -37,7 +37,7 @@ In `urls.py`, the general syntax is:
 - Install Django inside the environment\
   `python3 -m pip install django`
 - Create project\
-  `django-admin startproject <project_name>`
+  `django-admin startproject <project_name> .`
 
 ## Running Project
 - Create or navigate to project directory\
