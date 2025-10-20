@@ -173,7 +173,7 @@ v-model: lets us create a link between the input element's value attribute and a
   
 ## 🗺️ Router
 - Install Vue Router package\
-  `npm install vue-router`\
+  `npm install vue-router`
 - In `main.js`:
   ```javascript
   import { createRouter, createWebHistory } from 'vue-router'
@@ -240,5 +240,3 @@ export default {
 };
 </script>
 ```
-
-
