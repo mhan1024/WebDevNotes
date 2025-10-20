@@ -18,7 +18,7 @@ A Python web framework for building websites or web applications
 They connect web addresses to views
 - Located in `urls.py`
 In `urls.py`, the general syntax is:
-```
+```python
   from django.urls import path
   from . import views # imports views files
 
@@ -55,18 +55,22 @@ An app is a web app that handles one specific feature or purpose
 ## Connecting to PostgreSQL
 - Login as postgres\
   `psql -U postgres`
-- Create a user\
-  `CREATE USER <project_user> WITH PASSWORD '<password>';`
-- Create a database\
-  `CREATE DATABASE <project_db> OWNER <project_user>;`
-- Grant privileges
+- Create a user
+  ```sql
+    CREATE USER <project_user> WITH PASSWORD '<password>';
   ```
+- Create a database
+  ```sql
+    CREATE DATABASE <project_db> OWNER <project_user>;
+  ```
+- Grant privileges
+  ```sql
     ALTER ROLE <project_user> SET client_encoding TO 'utf8';
     ALTER ROLE <project_user> SET default_transaction_isolation TO 'read committed';
     GRANT ALL PRIVILEGES ON DATABASE <project_db> TO <project_user>;
   ```
 - Update Django `settings.py`
-  ```
+  ```python
     DATABASES = {
       "default": {
           'ENGINE': 'django.db.backends.postgresql',
