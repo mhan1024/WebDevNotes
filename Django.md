@@ -121,3 +121,5 @@ An app is a web app that handles one specific feature or purpose
 - Note: Django automatically inserts the `id` field that is also auto-incremented
 - Run this command so that Django will apply those migrations to the actual database\
   `python3 manage.py migrate`
+<hr>
+
