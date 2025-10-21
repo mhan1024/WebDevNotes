@@ -51,6 +51,7 @@ In `urls.py`, the general syntax is:
 An app is a web app that handles one specific feature or purpose
 - Create an app
   `python3 manage.py startapp <app_name>`
+- Add app to `settings.py`'s `INSTALLED APPS = [ ..., <app_name> ]`
 
 ## Connecting to PostgreSQL
 - Login as postgres\
@@ -105,3 +106,18 @@ An app is a web app that handles one specific feature or purpose
   firebase_admin.initialize_app(cred)
 
   ```
+
+## Models
+- To create a model, make sure you have an app created and navigate to the `models.py` file in the `/<app_name>/` folder
+- Add a table by creating a class and describing the table's fields
+  ```python
+  from django.db import models
+
+  class <table_name>(models.Model):
+    <field> = models.CharField(max_length=255) # this is a text field with a max length of 255 characters
+  ```
+- After describing a Model, run this command to prepare the migration files describing changes \
+  `python3 manage.py makemigrations <app_name>`
+- Note: Django automatically inserts the `id` field that is also auto-incremented
+- Run this command so that Django will apply those migrations to the actual database\
+  `python3 manage.py migrate`
