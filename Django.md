@@ -82,3 +82,26 @@ An app is a web app that handles one specific feature or purpose
       }
     }
   ```
+
+## Connecting to Firebase
+- Obtain the Firebase Admin SDK by going to <a href="https://firebase.google.com/?gclsrc=aw.ds&gad_source=1&gad_campaignid=12211052842&gbraid=0AAAAADpUDOgjkaEAAY1Df3S7qeMlE4ZwJ&gclid=CjwKCAjwu9fHBhAWEiwAzGRC_0lJvSlqrJ8P6moempR3H1R9dY5Oo3wL9Xxkn8cuV9JS8KaBBqMhghoCLW4QAvD_BwE">Firebase Console</a>
+- Open your project and click on the ⚙️ 'Settings' icon -> Project Settings
+- In Project Settings, go to the 'Service Accounts' tab and click on the 'Generate new private key' and download the `serviceAccountKey.json`
+- Install Firebase Admin SDK\
+  `python3 -m pip install firebase-admin`
+- Place it in the project's directory
+  ```
+  project_root/
+  ├─ backend/
+  │  ├─ serviceAccountKey.json
+  │  ├─ settings.py
+  ```
+- Initialize Firebase in `settings.py`
+  ```python
+  import firebase_admin
+  from firebase_admin import credentials
+  
+  cred = credentials.Certificate("path/to/serviceAccountKey.json")
+  firebase_admin.initialize_app(cred)
+
+  ```
