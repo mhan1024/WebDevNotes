@@ -240,3 +240,36 @@ export default {
 };
 </script>
 ```
+
+## Connecting to Firebase
+- Obtain the Firebase Admin SDK by going to <a href="https://firebase.google.com/?gclsrc=aw.ds&gad_source=1&gad_campaignid=12211052842&gbraid=0AAAAADpUDOgjkaEAAY1Df3S7qeMlE4ZwJ&gclid=CjwKCAjwu9fHBhAWEiwAzGRC_0lJvSlqrJ8P6moempR3H1R9dY5Oo3wL9Xxkn8cuV9JS8KaBBqMhghoCLW4QAvD_BwE">Firebase Console</a>
+- Open your project and click on the ⚙️ 'Settings' icon -> Project Settings
+- In Project Settings, go to the 'Service Accounts' tab and click on the 'Generate new private key'
+  
+<hr>
+
+- Create a file for Firebase configurations called `firebaseConfig.js`
+- Add Firebase SDK to the project's frontend\
+  `npm install firebase`
+- General template for `firebaseConfig.js`
+  ```javascript
+  import { initializeApp } from "firebase/app";
+
+  const firebaseConfig = {
+    apiKey: "...",
+    authDomain: "...",
+    projectId: "...",
+  };
+
+  const app = initializeApp(firebaseConfig);
+  // retrieve Firebase service instances
+  
+  ```
+
+
+
+
+
+
+
+
