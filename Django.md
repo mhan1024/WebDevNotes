@@ -122,4 +122,19 @@ An app is a web app that handles one specific feature or purpose
 - Run this command so that Django will apply those migrations to the actual database\
   `python3 manage.py migrate`
 <hr>
+<h4>Field-Types & Attributes</h4>
 
+|Field|Required Attributes|
+|:-----:|:-------------------:|
+|CharField|max_length|
+|TextField|none|
+|IntegerField|none|
+|DecimalField|max_digits, decimal_places|
+|BooleanField|none|
+|EmailField|none|
+|UrlField|none|
+|DateField/DateTimeField|none|
+|ForeignKey|to, on_delete|
+|FileField/ImageField|upload_to|
+
+Optional Attributes: blank, null, default, choices, auto_now, auto_now_add, related_name
