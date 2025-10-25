@@ -107,7 +107,22 @@ An app is a web app that handles one specific feature or purpose
 
   ```
 
-## Models
+## Django REST Framework (DRF)
+
+### Setup
+- Install Django REST framework if you haven't already
+  ```
+  python3 -m pip install djangorestframework
+  ```
+- Add DRF to INSTALLED_APPS in `settings.py`
+  ```python
+  INSTALLED_APPS = [
+    ...
+    'rest_framework',
+  ]
+  ```
+  
+### Models
 - To create a model, make sure you have an app created and navigate to the `models.py` file in the `/<app_name>/` folder
 - Add a table by creating a class and describing the table's fields
   ```python
@@ -138,3 +153,56 @@ An app is a web app that handles one specific feature or purpose
 |FileField/ImageField|upload_to|
 
 Optional Attributes: blank, null, default, choices, auto_now, auto_now_add, related_name
+
+### Serializers
+- Serialization: converts complex data (Django models) into JSON or XML format
+- Create a `<app_name>/serializers.py`
+- General syntax:
+  ```python
+  from rest_framework import serializers
+  from .models import <model_name>
+
+  class <model_name>Serializer(serializers.ModelSerializer):
+    class Meta:
+      model = <model_name>
+      fields = [<fields>] OR '__all__'
+  ```
+  - ModelSerializer automatically generates fields based on the model
+  
+### Viewsets
+- Viewsets: define views that handle API requests and responses
+- In `<app_name>/views.py`:
+  ```python
+  from rest_framework import viewsets
+  from .models import <model_name>
+  from .serializers import <serializer_name>
+
+  class <model_name>ViewSet(viewsets.ModelViewSet):
+    queryset = <model_name>.objects.all()
+    serializer_class = <serializer_name>
+  ```
+  - ModelViewSet automatically provides list, retrieve, create, update and destroy actions
+  - queryset defines the set of objects available via the API
+  - serializer_class tells DRF how to serialize/deserialize the Model data
+
+### Configure Router
+- DRF routers auto generates URL patterns
+- In `urls.py`:
+  ```python
+  from django.urls import path, include
+  from rest_framework.routers import DefaultRouter
+  from .views import <viewset_name>
+
+  router = DefaultRouter()
+  router.register(r'<model>', <viewset_name>)
+
+  urlpatterns = [
+    path('', include(router.urls)),
+  ]
+  ```
+  - The DefaultRouter auto creates standard RESTful endpoints like:
+    - GET /
+    - POST /
+    - GET /{id}
+    - PUT /{id}
+    - DELETE /{id}
