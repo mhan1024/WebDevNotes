@@ -6,6 +6,12 @@ Used for building cross-platform apps (web, iOS, Android)
   ```
   npx @react-native-community/cli init APPNAME
   ```
+- Run app (iOS):
+  ```
+  npx react-native run-ios
+  ```
+- Run app (Android):
+  ```npx react-native run-android```
 
 ## Basic components
 - Be sure to import from react-native
