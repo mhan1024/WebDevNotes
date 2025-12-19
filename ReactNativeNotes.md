@@ -4,24 +4,9 @@ Used for building cross-platform apps (web, iOS, Android)
 ## Environment setup & basic commands
 - Create app (project):
   ```
-  npx create-expo-app@latest
+  npx @react-native-community/cli init APPNAME
   ```
-- Start development server (go to project directory):
-  ```
-  npx expo start
-  ```
-- Generate native Android and iOS directories
-  ```
-  npx expo prebuid
-  ```
-- Reset project
-  ```
-  npm run reset-project
-  ```
-- Install new libraries
-  ```
-  npx expo install package-name
-  ```
+
 ## Basic components
 - Be sure to import from react-native
   ```javascript
