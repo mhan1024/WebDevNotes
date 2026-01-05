@@ -4,7 +4,7 @@ Used for building cross-platform apps (web, iOS, Android)
 ## Environment setup & basic commands
 - Create app (project):
   ```
-  npx @react-native-community/cli init APPNAME
+  npx create-expo-app my-app
   ```
 - Run app (iOS):
   ```
